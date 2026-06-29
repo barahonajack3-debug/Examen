@@ -6,18 +6,21 @@ package actividad;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.ArrayList;
 
 /**
  *
  * @author Student
  */
-public class Actividades {
+public class Actividad {
+    public class Actividades {
     private String Nombre;
     private LocalDate Fecha;
     private LocalTime Hora;
     private int CupoMaximo;
     private String ClientesInscritos;
     private TipoActividad TipoActividad;
+    private ArrayList<String> Clientes;
     
     public String getNombre(){
         return Nombre;
@@ -57,6 +60,7 @@ public class Actividades {
         this.CupoMaximo = CupoMaximo;
         this.ClientesInscritos = ClientesInscritos;
         this.TipoActividad = TipoActividad;
+        this.Clientes=new ArrayList<>();
     }
     
     public String ToString(){
@@ -64,5 +68,24 @@ public class Actividades {
                 "\nClientes Inscritos"+ClientesInscritos+"Tipo Actividad"+TipoActividad;
     }
     
+    
+    
+    public boolean hayCupoDisponible(){
+        return Clientes.size() < CupoMaximo;
+    }
+    
    
+   public boolean inscribirClientes(String nombre_cliente){
+       if (hayCupoDisponible()){
+           Clientes.add(nombre_cliente);
+           return true;
+       }
+        return false;
+   }
+   
+   public int cuposDisponibles(){
+       return CupoMaximo - Clientes.size();
+   }
+   
+}
 }

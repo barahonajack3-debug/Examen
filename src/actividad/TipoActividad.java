@@ -9,5 +9,7 @@ package actividad;
  * @author Student
  */
 public enum TipoActividad {
-    
+    Caminatas,
+    Clase_Cocina,
+    Recorrido_Turistico
 }

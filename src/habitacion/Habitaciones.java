@@ -34,12 +34,19 @@ public class Habitaciones extends Alojamientos{
     public Habitaciones(int NumeroPiso, boolean Balcon, int Codido, String Nombre, int CapacidadMaxima, int PrecioNoche, boolean Estado) {
         super(Codido, Nombre, CapacidadMaxima, PrecioNoche, Estado);
         this.NumeroPiso = NumeroPiso;
-        this.Balcon = Balcon;
+        this.Balcon =Balcon;
     }
-
+    
+    public String tieneBalcon(){
+    if(Balcon=true){
+        return "Si tiene";
+    }else
+        return "No tiene";
+    }
+    
     @Override
     public String toString() {
-        return "NumeroPiso:" + NumeroPiso + "\nBalcon:" + Balcon;
+        return "NumeroPiso:" + NumeroPiso + "\nBalcon:" + tieneBalcon();
     }
    
     //Funciones

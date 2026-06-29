@@ -42,7 +42,7 @@ public class Alojamientos {
     public Alojamientos(int Codido, String Nombre, int CapacidadMaxima, int PrecioNoche, boolean Estado) {
         this.Codido = Codido;
         this.Nombre = Nombre;
-        this.CapacidadMaxima = 2;
+        this.CapacidadMaxima = CapacidadMaxima;
         this.PrecioNoche = 5000;
         this.Estado = Estado;
     }

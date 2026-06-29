@@ -25,7 +25,7 @@ public class Alojamientos {
     public int getCapacidadMaxima() {
         return CapacidadMaxima;
     }
-    public int getPrecio() {
+    public int getPrecioNoche() {
         return PrecioNoche;
     }
     public boolean isEstado() {
@@ -43,7 +43,7 @@ public class Alojamientos {
         this.Codido = Codido;
         this.Nombre = Nombre;
         this.CapacidadMaxima = CapacidadMaxima;
-        this.PrecioNoche = PrecioNoche;
+        this.PrecioNoche = 5000;
         this.Estado = Estado;
     }
 

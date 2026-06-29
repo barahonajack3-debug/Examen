@@ -31,7 +31,7 @@ public class Habitaciones extends Alojamientos{
     }
     
     //Constructor
-    public Habitaciones(int NumeroPiso, boolean Balcon, int Codido, String Nombre, int CapacidadMaxima, int PrecioNoche, boolean Estado) {
+    public Habitaciones(int NumeroPiso,boolean Balcon, int Codido, String Nombre, int CapacidadMaxima, int PrecioNoche, boolean Estado) {
         super(Codido, Nombre, CapacidadMaxima, PrecioNoche, Estado);
         this.NumeroPiso = NumeroPiso;
         this.Balcon =Balcon;
@@ -46,7 +46,8 @@ public class Habitaciones extends Alojamientos{
     
     @Override
     public String toString() {
-        return "NumeroPiso:" + NumeroPiso + "\nBalcon:" + tieneBalcon();
+        return "NumeroPiso:" + NumeroPiso + "\nBalcon:" + tieneBalcon()+"\nCodido:" + this.getCodido() + "\nNombre:" + this.getNombre() + "\nCapacidadMaxima:" 
+                + this.getCapacidadMaxima() + "\nPrecioNoche:" + this.getPrecioNoche()+ "\nEstado:" + this.isEstado();
     }
    
     //Funciones

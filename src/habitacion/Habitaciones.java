@@ -52,11 +52,11 @@ public class Habitaciones extends Alojamientos{
    
     //Funciones
     //Verificar si una habitacion tiene espacio disponible
-    public boolean verificarEspacioHabitacion(int CapacidadMaxima, int cantidadClientesReservacion){
+    public String verificarEspacioHabitacion(int CapacidadMaxima, int cantidadClientesReservacion){
         if(CapacidadMaxima<cantidadClientesReservacion){//cantidadClientes seria de reservacion que aun no tengo
-            return false;
+            return "No tiene espacio disponible";
         }else
-            return true;
+            return "Si tiene espacio disponible";
     }
     //Calcular el total a pagar según la cantidad de noches y el precio
     public double costoTotalNoche(int PrecioNoche,int NochesReservadas){//Noches reservadas tambien viene de Reservacion que aun no tengo
